@@ -17,4 +17,11 @@ class Event
   def average_age
     (@ages.sum.to_f / @ages.length).round(2)
   end
+
+  def standard_deviation_age
+    adjusted_ages = ages.map { |age| (age - average_age) }
+    adjusted_squares = adjusted_ages.map { |age| (age * age) }
+    sum_average = adjusted_squares.sum / ages.length
+    Math.sqrt(sum_average).round(2)
+  end
 end
