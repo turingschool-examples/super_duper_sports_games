@@ -1,4 +1,4 @@
 require './lib/games_interface'
 
-interface = GamesInterface.create_games
+interface = GamesInterface.new
 interface.main_menu
