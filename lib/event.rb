@@ -17,9 +17,9 @@ class Event
 
 
   def average_age
-  average = sum / @age.count.to_f
-  require "pry"; binding.pry
-  puts average
+  average = @age.sum / @age.count.to_f
+  # require "pry"; binding.pry
+   average
   end
 
 end
