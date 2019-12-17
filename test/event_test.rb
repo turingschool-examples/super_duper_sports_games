@@ -22,5 +22,4 @@ class EventTest < MiniTest::Test
     assert_equal 26.6, event.average_age
     assert_equal 8.28, event.standard_deviation_age
   end
-
 end
