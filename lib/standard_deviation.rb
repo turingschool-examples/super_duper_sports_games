@@ -1,5 +1,6 @@
 ages = [24, 30, 18, 20, 41]
 
+    
   sum = ages.sum
 
   total = ages.count
