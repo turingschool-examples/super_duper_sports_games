@@ -14,4 +14,8 @@ class EventTest < Minitest::Test
     assert_equal "Curling", @event.name
     assert_equal [24, 30, 18, 20, 41], @event.ages
   end
+
+  def test_it_can_find_max_age
+    assert_equal 41, @event.max_age
+  end
 end
