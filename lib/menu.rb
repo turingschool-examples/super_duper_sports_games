@@ -4,6 +4,11 @@ require './lib/games'
 require './lib/event'
 
 class Menu
+
+  def initialize
+    @game = Games.new(@year)
+  end
+
     def start
       puts "Hello. Welcome to Super Sports Games!"
       puts "Please enter the year for the games you want to work with:"
@@ -35,16 +40,15 @@ class Menu
     def report
       event = @event_name
       event = Event.new(@event_name, @player_array)
-      game = Games.new(@year)
-      game.add_event(event)
-      puts "#{game.event_summary(event)}"
+      @game.add_event(event)
+      puts "#{@game.event_summary(event)}"
       puts "Would you like to add another event?"
       again = gets.chomp.upcase
       if again == "YES"
         start
       else
         puts "Summery of all Games:"
-        puts "#{game.summary}"
+        puts "#{@game.summary}"
       end
     end
 end
