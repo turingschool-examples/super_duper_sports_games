@@ -15,3 +15,7 @@ squared = subtracted.map do |subtract|
           end
 
 square_sum = squared.sum
+
+divided = square_sum / count
+
+p Math.sqrt(divided)
