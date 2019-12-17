@@ -1,5 +1,18 @@
-ages = [24, 30, 18, 20, 41]
+# ages = [24, 30, 18, 20, 41]
 
-# Your code here for calculating the standard deviation
+module StandardDeviation
+  def standard_deviation_age(numbers)
 
-# When you find the standard deviation, print it out
+    average_num = numbers.sum.to_f.round(2) / numbers.length
+
+    numbers_less_average = numbers.map { |num| num - average_num}
+
+    squared_nums = numbers_less_average.map { |num| num * num }
+
+    average_after_squared = squared_nums.sum / numbers.length
+
+    Math.sqrt(average_after_squared).round(2)
+  end
+end
+
+# p standard_deviation(ages)
