@@ -1,4 +1,5 @@
 require_relative './standard_deviation'
+
 class Event
   attr_reader :name, 
               :ages
