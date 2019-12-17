@@ -1,16 +1,19 @@
 ages = [24, 30, 18, 20, 41]
 
-#step1
+def find_sum
 step_1_sum = 0
 step_1 = ages.each {|age|step_1_sum += age.to_f}
+end
 
-#step2
+def count
 step_2_count = ages.count.to_f
+end
 
-#step3
+def average
 step_3_average = (step_1_sum.to_f / step_2_count.to_f)
+end
 
-#step4
+
 step_4_start = ages.map {|age| age - step_3_average}
 step_4 = step_4_start.map {|number| number.round(2)}
 

@@ -22,6 +22,10 @@ class Event
    average
   end
 
+  def standard_deviation_age
+    
+  end
+
 end
   # require "pry"; binding.pry
   # def standard_deviation_age

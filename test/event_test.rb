@@ -27,8 +27,8 @@ class EventTest < Minitest::Test
     assert_equal 26.6, @event.average_age
   end
 
-  # def test_standard_deviation
-  #   assert_equal 8.28, @event.standard_deviation_age
-  # end
+  def test_standard_deviation
+    assert_equal 8.28, @event.standard_deviation_age
+  end
 
 end
