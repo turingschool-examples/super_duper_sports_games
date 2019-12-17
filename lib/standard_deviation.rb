@@ -35,3 +35,5 @@ temp = sum_diff_squared / count_ages.to_f
 standard_deviation = Math.sqrt(temp).round(2)
 
 # When you find the standard deviation, print it out
+
+puts "the standard deviation is #{standard_deviation}"
