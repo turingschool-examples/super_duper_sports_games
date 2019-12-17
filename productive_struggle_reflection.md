@@ -1,0 +1,1 @@
+I felt pretty good about productive struggle on this challenge. Most of the struggle came with iteration 4, but clarifying the problem led to an idea for trying a different method every time I got an error.
