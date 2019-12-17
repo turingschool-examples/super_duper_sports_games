@@ -37,11 +37,9 @@ class Games
     end.join("\n")
   end
 
-  def start
-    puts "Welcome! Please enter a year for the games".
-
-    user_answer = gets.chomp
-        puts "The year is {#{user_answer}}. Let the games begin!"
-        start
-      end
-  end
+  # def start
+  #   puts "What is the year?"
+  #   user_answer = gets.chomp
+  #   puts "The year is {#{user_answer}}, let the games begin!"
+  # end
+end
