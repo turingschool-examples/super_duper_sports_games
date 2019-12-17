@@ -13,7 +13,7 @@ class StandardDev
       num ** (2)
     end
     ave_diff_squared = squared_difference_from_average.sum / squared_difference_from_average.length
-    standard_dev = Math.sqrt(ave_diff_squared).round(2)
+    st_dev = Math.sqrt(ave_diff_squared).round(2)
   end
 
 end
