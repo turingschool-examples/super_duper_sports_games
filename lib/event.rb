@@ -7,6 +7,12 @@ class Event
     @ages = ages
   end
 
+  def name
+    puts "Please enter name of event:"
+    name = gets.chomp.capitalize
+    @name = name
+  end
+
   def max_age
     @ages.max
   end
