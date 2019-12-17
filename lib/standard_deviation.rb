@@ -4,9 +4,9 @@ sum_of_ages = ages.sum
 
 number_of_individuals = ages.length
 
-x = sum_of_ages / number_of_individuals.to_f
+average_age = sum_of_ages / number_of_individuals.to_f
 
-y = ages.map { |age| age - x }
+y = ages.map { |age| age - average_age }
 
 z = y.map { |y| y * y }
 
