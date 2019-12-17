@@ -1,4 +1,5 @@
 require './lib/games.rb'
+require './lib/event.rb'
 
 class SummaryOfGames
   def start
@@ -21,8 +22,20 @@ class SummaryOfGames
     
     event = gets.chomp
     puts "\n"
+    
+    puts "Enter ages (separated by a space):"
+    print "> "
+    
+    ages = gets.chomp
+    puts "\n"
+    
+    split_ages = ages.split
+    
+    ages_int = split_ages.map {|age| age.to_i}
+    
+    new_event = Event.new(event, ages_int)
 
-    @games.events << event
+    @games.events << new_event
     
     puts "Would you like to enter another event? Enter yes or no."
     print "> "
@@ -38,7 +51,8 @@ class SummaryOfGames
       enter_event
     elsif yes_or_no == "no"
       puts "\n"
-      puts @games.events
+      
+      @games.events.each {|event| puts event.name}
       return
     else
       puts "\n"
@@ -50,14 +64,14 @@ class SummaryOfGames
   
   def get_summary
     puts "\n"
-    puts "Enter yes to get summary, or any key to quit:"
+    puts "Enter yes to get summary of ages, or any key to quit:"
     print "> "
 
     get_summary = gets.chomp
     puts "\n"
     
     if get_summary == "yes"
-      @games.summary
+      p @games.summary
     else
       exit(true)
     end
