@@ -12,15 +12,15 @@ class StandardDeviation
   end
 
   def average_of_integers
-    sum_integers.to_f / length_of_array
+    (sum_integers.to_f / length_of_array).round(2)
   end
 
   def subtract_integers
-    @numbers.map { |number| number - average_of_integers }
+    @numbers.map { |number| (number - average_of_integers).round(2) }
   end
 
   def square_integers
-    subtract_integers.map { |integer| integer ** 2 }
+    subtract_integers.map { |integer| (integer ** 2).round(2) }
   end
 
   def sum_of_squares
@@ -28,7 +28,7 @@ class StandardDeviation
   end
 
   def divide_by_length
-    sum_of_squares / length_of_array
+    (sum_of_squares / length_of_array).round(2)
   end
 
   def get_square_root
@@ -38,7 +38,6 @@ class StandardDeviation
   def get_standard_deviation
     get_square_root
   end
-  
 end
 
 ages = [24, 30, 18, 20, 41]
