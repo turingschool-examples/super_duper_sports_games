@@ -18,4 +18,8 @@ class EventTest < Minitest::Test
   def test_it_can_find_max_age
     assert_equal 41, @event.max_age
   end
+
+  def test_it_can_find_min_age
+    assert_equal 18, @event.min_age
+  end
 end
