@@ -1,7 +1,7 @@
 ages = [24, 30, 18, 20, 41]
 
 # Your code here for calculating the standard deviation
-def standard_deviation(ages)
+def standard_deviationd(ages)
   a_sum = ages.sum
   a_count = ages.count
   a_mean = (a_sum / a_count.to_f)
@@ -13,3 +13,4 @@ def standard_deviation(ages)
 end
 
 # When you find the standard deviation, print it out
+p standard_deviation
