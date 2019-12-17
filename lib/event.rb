@@ -1,7 +1,28 @@
-ages = [24, 30, 18, 20, 41]
+class Event 
+    attr_reader :name, :ages
+    def initialize(name, ages)
+        @name = name 
+        @ages = ages
+    end
 
-    
-  sum = ages.sum
+    def max_age
+        ages.max
+    end
+
+    def min_age
+        ages.min
+    end
+
+    def average_age 
+        sum = ages.sum
+
+        total = ages.count
+
+        average = (sum.to_f)/ total
+    end
+
+    def standard_deviation_age
+      sum = ages.sum
 
   total = ages.count
 
@@ -24,15 +45,5 @@ ages = [24, 30, 18, 20, 41]
     divided = added/total
 
     square_root = Math.sqrt(68.64).round(2)
-        
-  puts sum 
-  p total
-  p average
-  p subtract_by_average
-  p squared_array
-  p added
-  p divided
-  p square_root
-    # Your code here for calculating the standard deviation
-
-# When you find the standard deviation, print it out
+    end
+end
