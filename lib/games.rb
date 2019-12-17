@@ -34,7 +34,7 @@ class Games
   def all_events_summary
     @events.map do |event|
       event_summary(event)
-    end.join("\n")
+    end.join("  ")
   end
 
   # def start
