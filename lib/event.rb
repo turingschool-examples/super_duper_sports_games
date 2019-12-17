@@ -19,7 +19,7 @@ class Event
     (@ages.sum / @ages.length.to_f).round(2)
   end
 
-  def standard_deviation
+  def standard_deviation_age
     age_minus_average_age = @ages.map { |age| age - average_age }
 
     age_minus_average_age_squared = age_minus_average_age.map { |number| number * number }
