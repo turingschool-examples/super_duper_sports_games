@@ -22,4 +22,8 @@ class EventTest < Minitest::Test
   def test_it_can_find_min_age
     assert_equal 18, @event.min_age
   end
+
+  def test_it_can_find_average_age
+    assert_equal 26.6, @event.average_age
+  end
 end
