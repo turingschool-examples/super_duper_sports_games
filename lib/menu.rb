@@ -33,6 +33,7 @@ class Menu
     end
 
     def report
+      event = @event_name
       event = Event.new(@event_name, @player_array)
       game = Games.new(@year)
       game.add_event(event)
