@@ -46,11 +46,12 @@ class GamesInterface
   def enter_ages
     choice = nil
     ages = []
+    puts "Enter participant ages ([Q] to quit, [D] to delete last entry)"
     until (choice == "Q")
-      print "Enter participant age ([Q] to quit, [D] to delete last entry): "
+      print "Enter participant ##{ages.length + 1} age: "
       choice = gets.chomp.upcase
-      break if choice == 'q'
-      ages.pop if choice == 'd'
+      break if choice == 'Q'
+      ages.pop if choice == 'D'
       age = choice.to_i
       ages << age if age > 0
       puts "Enter valid age: " if age <= 0
