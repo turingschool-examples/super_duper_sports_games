@@ -36,4 +36,12 @@ class Games
       event_summary(event)
     end.join("\n")
   end
-end
+
+  def start
+    puts "Welcome! Please enter a year for the games".
+
+    user_answer = gets.chomp
+        puts "The year is {#{user_answer}}. Let the games begin!"
+        start
+      end
+  end
