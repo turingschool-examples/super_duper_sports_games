@@ -34,6 +34,12 @@ class Games
   def all_events_summary
     @events.map do |event|
       event_summary(event)
-    end.join("\n")
+    end.join("  ")
   end
+
+  # def start
+  #   puts "What is the year?"
+  #   user_answer = gets.chomp
+  #   puts "The year is {#{user_answer}}, let the games begin!"
+  # end
 end
