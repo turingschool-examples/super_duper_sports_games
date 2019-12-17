@@ -40,9 +40,12 @@ class GamesInterface
     if event_name.length > 13
       event_name = event_name[0,11].strip + "..."
     end
+    event_name
   end
 
   def enter_ages
+    choice = nil
+    ages = []
     until (choice == "Q")
       print "Enter participant age ([Q] to quit, [D] to delete last entry): "
       choice = gets.chomp.upcase
@@ -53,9 +56,10 @@ class GamesInterface
       puts "Enter valid age: " if age <= 0
       puts "Current ages: #{ages}"
     end
+    ages
   end
 
   def summary
-    puts "\n" + games.summary
+    puts "\n" + @games.summary
   end
 end
