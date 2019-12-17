@@ -15,14 +15,15 @@ class Event
     @ages.min
   end
 
-  def mean_age
-    @ages.sum / ages.size.to_f
+  def average_age
+    mean = @ages.sum {|age| age} / @ages.size.to_f
+    mean.round(2)
   end
 
   def standard_deviation_age
     total  = 0
     @ages.each do |age|
-      total += (age - mean_age)**2
+      total += (age - average_age)**2
     end
     Math.sqrt(total/(ages.size)).round(2)
   end

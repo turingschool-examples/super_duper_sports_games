@@ -36,4 +36,6 @@ class Games
       event_summary(event)
     end.join("\n")
   end
+
+
 end
