@@ -7,6 +7,12 @@ class Games
     @events = []
   end
 
+  def year
+    puts "Please enter year of games:"
+    year = gets.chomp.to_i
+    @year = year
+  end
+
   def add_event(event)
     @events << event
   end
