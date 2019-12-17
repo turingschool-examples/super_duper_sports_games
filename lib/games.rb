@@ -1,7 +1,6 @@
 class Games
-  attr_reader :events,
-              :year
-
+  attr_accessor :events,
+                :year
   def initialize(year)
     @year = year
     @events = []
@@ -36,4 +35,5 @@ class Games
       event_summary(event)
     end.join("\n")
   end
+
 end
